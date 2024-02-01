@@ -1,0 +1,14 @@
+name: Validate website files
+on:
+  push:
+    branches: ["main"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate
+        uses: anishathalye/proof-html@v2
+        with:
+          directory: ./
