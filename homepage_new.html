@@ -1,8 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="author" content="Ha119" />
 <meta name="Keywords" content="CityU 9, Hall9, Hall 9, Sir Gordon, Wu hall, wuddies" />
 <meta name="description" content=" Hall 9 is commissioned to host a community of active learners at City University of Hong Kong, who strive to be excellent in academic and social endeavors, global in understanding and experience, compassionate in heart, and collaborative in action." />
@@ -11,13 +10,14 @@
 </head>
 
 <body>
+    <div id="header"></div>
 <center>
     <div style="width: 920px; overflow: hidden; background-color: #FAFAFA; box-shadow:0px 5px 50px -20px rgba(100,100,100,0.5);">
-        <div>
+        <!-- <div>
             <img style="width: 920px" src="images\1home\pictop3.jpg" alt="hall9 picture">
         </div>
 				
-        <div style="width: 920px; background-color: #8000FF; margin-top: -5px; border-top: 1px solid #FFFFFF;" id = "menu"></div>
+        <div style="width: 920px; background-color: #8000FF; margin-top: -5px; border-top: 1px solid #FFFFFF;" id = "menu"></div> -->
         <div class="container">
             <div id="slides">
 
@@ -185,15 +185,17 @@
     color: #9e2020
     }
     
-    .navbar {
+    /* .navbar {
     overflow: hidden
-    }        
+    }         */
     
     body {
         font-family: Calibri;
         background-size:100% 100%;
         background-repeat:no-repeat;
         background-attachment:fixed;
+        background-color: #e6d1ff;
+        margin: 0;
     }
 
 </style>
@@ -202,7 +204,8 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/c1slides.js"></script>
 <script>
-    $("#menu").load("Menu.html");
+    // $("#menu").load("Menu.html");
+    $("#header").load("header.html");
     
     $(function() {
         $('#slides').slidesjs({
@@ -215,14 +218,14 @@
         });
     });
 
-    var ii = Math.floor((Math.random()*500)+1); 
-    if (ii>498){
-        var imagei = "images/1home/bgpic5.jpg";
-        document.body.style.backgroundImage = "url('" + imagei + "')"; 
-    }
-    else if (ii>0){
-        document.body.style.backgroundColor="#EEEEEE"; 
-    }
+    // var ii = Math.floor((Math.random()*500)+1); 
+    // if (ii>498){
+    //     var imagei = "images/1home/bgpic5.jpg";
+    //     document.body.style.backgroundImage = "url('" + imagei + "')"; 
+    // }
+    // else if (ii>0){
+    //     document.body.style.backgroundColor="#EEEEEE"; 
+    // }
 </script>
 
 </html>
