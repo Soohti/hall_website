@@ -49,6 +49,45 @@
             .navbar {
                 width: 70%;
             }
+
+            #hamburger {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                color: inherit;
+                font-size: 30px;
+            }
+
+            .navbar.show {
+                display: block;
+            }
+
+            @media (max-width: 960px) {
+                .navbar {
+                    display: none;
+                }
+
+                .navbar ul {
+                    display: block;
+                    text-align: center;
+                }
+
+                .navbar li {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                #hamburger {
+                    display: block;
+                }
+            }
+
+            @media (min-width: 960px) {
+                #hamburger {
+                    display: none;
+                }
+            }
+
         </style>
     </head>
 
@@ -66,7 +105,16 @@
                     <li><a href="P7info.html?passi=1">Other Info</a></li>
                 </ul>
             </nav>
+            <button id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
+
+        <script>
+            document.getElementById("hamburger").addEventListener("click", function() {
+                document.querySelector(".navbar").classList.toggle("show");
+            });
+        </script>
     </body>
 
 </html>
