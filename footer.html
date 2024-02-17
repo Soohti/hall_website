@@ -27,13 +27,9 @@
             }
 
             .contact {
-                display: flex;
                 width: 25%;
-            }
-
-            .contact div {
-                width: 30%;
-                text-align: left;
+                padding-left: 5%;
+                box-sizing: border-box;
             }
 
             .location {
@@ -50,19 +46,43 @@
                 width: 30px;
                 margin-left: 5px;
             }
+
+            @media (max-width: 960px) {
+                .footer {
+                    flex-direction: column;
+                    align-items: center;
+                    padding-left: 0;
+                }
+
+                .contact {
+                    width: 100%;
+                    padding-left: 0;
+                    text-align: center;
+                }
+
+                .location {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .social-media {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .social-media img {
+                    margin: 0 15px;
+                }
+            }
         </style>
     </head>
 
     <body>
         <div class="footer">
             <div class="contact">
-                <div></div>
-                <div>
-                    <h3>CONTACT US</h3>
-                    <p>+852 9345 3493</p>
-                    <p>info@libpet.com</p>
-                </div>
-                
+                <h3>CONTACT US</h3>
+                <p>+852 9345 3493</p>
+                <p>info@libpet.com</p>
             </div>
             <div class="location">
                 <h3>LOCATION</h3>
