@@ -217,50 +217,44 @@
             .rule {
                 margin-top: 10px;
             }
-
         </style>
 
         <script>
             // make toc sticky to the left side and automatically scroll to the selected rule
-            window.onscroll = function () {
+            // make toc appear under the navbar-rules, but stick to the top if scrolled
+            $(document).ready(function () {
                 var toc = document.querySelector('.toc');
+                var navbar = document.querySelector('.navbar-rules');
+                var tocPos = navbar.offsetTop + navbar.offsetHeight;
                 var rules = document.querySelector('.rules');
                 var headings = document.querySelectorAll('.heading');
                 var tocLinks = document.querySelectorAll('.toc a');
 
                 var scrollPos = window.scrollY;
 
-                headings.forEach((heading, index) => {
-                    if (scrollPos >= heading.offsetTop - 20) {
-                        tocLinks.forEach((link) => {
-                            link.style.color = 'black';
-                            link.style.fontWeight = 'normal';
+                $(window).scroll(function () {
 
-                        });
-                        tocLinks[index].style.color = '#8c6cbf';
-                        tocLinks[index].style.fontWeight = 'bold';
-                        window.history.replaceState(null, null, `#rule${index + 1}`);
-                    }
-                });
-
-            };
-
-            // make toc appear under the navbar-rules, but stick to the top if scrolled
-            window.onload = function () {
-                var toc = document.querySelector('.toc');
-                var navbar = document.querySelector('.navbar-rules');
-                var tocPos = navbar.offsetTop + navbar.offsetHeight;
-
-                window.onscroll = function () {
-                    if (window.scrollY >= tocPos) {
+                    if ($(window).scrollTop() >= tocPos) {
                         toc.style.position = 'fixed';
                         toc.style.top = '10px';
                     } else {
                         toc.style.position = 'absolute';
-                        toc.style.top = `${tocPos}px`;
+                        toc.style.top = tocPos + 'px';
                     }
-                };
-            };
+
+                    headings.forEach((heading, index) => {
+                        if (scrollPos >= heading.offsetTop - 20) {
+                            tocLinks.forEach((link) => {
+                                link.style.color = 'black';
+                                link.style.fontWeight = 'normal';
+
+                            });
+                            tocLinks[index].style.color = '#8c6cbf';
+                            tocLinks[index].style.fontWeight = 'bold';
+                        }
+                    });
+                });
+            });
 
             // add more spaces after each rule number
             var rules = document.querySelectorAll('.rule');
