@@ -223,7 +223,7 @@
         <script>
             // make toc sticky to the left side and automatically scroll to the selected rule
             // make toc appear under the navbar-rules, but stick to the top if scrolled
-            $(document).ready(function () {
+            $(window).on('load', function () {
                 var toc = document.querySelector('.toc');
                 var navbar = document.querySelector('.navbar-rules');
                 var tocPos = navbar.offsetTop + navbar.offsetHeight + 20;
