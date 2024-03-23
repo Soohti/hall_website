@@ -259,9 +259,9 @@
                 tocLinks.forEach((link, index) => {
                     link.addEventListener('click', (e) => {
                         e.preventDefault();
-                        headings[index].scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        $('html, body').animate({
+                            scrollTop: headings[index].offsetTop - 10
+                        }, 200);
                     });
                 });
 
