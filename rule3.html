@@ -53,6 +53,7 @@
                     Scheme</a>
                 <a class="rule" href="https://www7.cityu.edu.hk/sro/hall9/images/5rule/return2021_sample.xlsx">Returning
                     numerical sample</a>
+                <div class="r-placeholder"></div>
             </div>
         </div>
 
@@ -77,11 +78,12 @@
 
             .rule {
                 margin-top: 10px;
-                margin-left: 80px;
+                margin-left: calc(20% + 40px);
+                margin-right: 20%;
             }
 
             .rule.r-heading {
-                margin-left: 40px;
+                margin-left: 20%;
             }
 
             .r-center {
@@ -105,8 +107,23 @@
             a.rule {
                 display: block;
                 margin-top: 10px;
-                margin-left: 40px;
+                margin-left: 20%;
                 color: black;
+            }
+
+            @media (max-width: 960px) {
+                .rule {
+                    margin-left: calc(10% + 20px);
+                    margin-right: 10%;
+                }
+
+                .rule.r-heading {
+                    margin-left: 10%;
+                }
+
+                a.rule {
+                    margin-left: 10%;
+                }
             }
         </style>
 
