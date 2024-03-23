@@ -186,6 +186,7 @@
                 margin: 0;
                 list-style-type: none;
                 border-radius: 10px;
+                visibility: hidden;
             }
 
             .toc ul {
@@ -221,18 +222,26 @@
         </style>
 
         <script>
-            // make toc sticky to the left side and automatically scroll to the selected rule
-            // make toc appear under the navbar-rules, but stick to the top if scrolled
             $(document).ready(function () {
                 var toc = document.querySelector('.toc');
-                var navbar = document.querySelector('.navbar-rules');
-                var tocPos = navbar.offsetTop + navbar.offsetHeight + 20;
+                var rule1 = document.querySelector('#rule1');
+                var tocPos = rule1.offsetTop;
                 var rules = document.querySelector('.rules');
                 var headings = document.querySelectorAll('.heading');
                 var tocLinks = document.querySelectorAll('.toc a');
 
                 toc.style.position = 'absolute';
                 toc.style.top = tocPos + 'px';
+                toc.style.visibility = 'visible';
+
+                tocLinks.forEach((link, index) => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        headings[index].scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
 
                 $(window).scroll(function () {
 
@@ -260,7 +269,6 @@
                 });
             });
 
-            // add more spaces after each rule number
             var rules = document.querySelectorAll('.rule');
             rules.forEach((rule) => {
                 rule.innerHTML = rule.innerHTML.replace(/(\d+\.\d+)/g, '$1&nbsp;&nbsp;&nbsp;');
