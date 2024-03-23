@@ -2,7 +2,6 @@
 
     <head>
         <title>Hall 9 - Rule 1</title>
-        <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     </head>
 
     <body>
@@ -207,7 +206,7 @@
 
             .rules {
                 margin-left: 250px;
-                margin-bottom: 500px;
+                margin-bottom: 1000px;
             }
 
             .heading {
@@ -255,7 +254,7 @@
                 setTimeout(() => {
                     clearInterval(interval);
                 }, 1000);
-                
+
 
                 tocLinks.forEach((link, index) => {
                     link.addEventListener('click', (e) => {
@@ -294,8 +293,17 @@
 
             var rules = document.querySelectorAll('.rule');
             rules.forEach((rule) => {
-                rule.innerHTML = rule.innerHTML.replace(/(\d+\.\d+)/g, '$1&nbsp;&nbsp;&nbsp;');
+                rule.innerHTML = rule.innerHTML.replace(/(\d+\.\d+(\.\d+)?)/g, '$1&nbsp;&nbsp;&nbsp;');
             });
+
+            var rules = document.querySelector('.rules');
+            var rule4 = document.querySelector('#rule4');
+            var height = window.innerHeight - rule4.offsetHeight
+            height = height > 20 ? height : 20;
+            rules.style.marginBottom = height + 'px';
+
         </script>
 
     </body>
+
+</html>

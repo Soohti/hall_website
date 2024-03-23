@@ -93,11 +93,11 @@
         $(".navbar-rules a").eq(0).css("color", "#8c6cbf");
 
         $(".navbar-rules a").click(function () {
-            var page = $(this).attr("href") + ".html";
-            $("#rules").load(page);
+            event.preventDefault();
+            var index = $(this).parent().index();
             $(".navbar-rules a").css("color", "#4e4a5f");
             $(this).css("color", "#8c6cbf");
-            return false;
+            $("#rules").load("rule" + (index + 1) + ".html");
         });
     </script>
 
