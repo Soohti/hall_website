@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="author" content="Ha119" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Hall9" />
 <meta name="Keywords" content="CityU 9, Hall9, Hall 9, Sir Gordon, Wu hall, wuddies" />
 <meta name="description" content=" Hall 9 is commissioned to host a community of active learners at City University of Hong Kong, who strive to be excellent in academic and social endeavors, global in understanding and experience, compassionate in heart, and collaborative in action." />
 
@@ -12,7 +13,7 @@
 <body>
     <div id="header"></div>
 <center>
-    <div style="margin: 20px; padding-top: 20px; width: 1200px; overflow: hidden; background-color: #E7D1FF;">
+    <div style="margin: 20px; padding-top: 20px; width: 80%; overflow: hidden; background-color: #E7D1FF;">
         <!-- <div>
             <img style="width: 920px" src="images\1home\pictop3.jpg" alt="hall9 picture">
         </div>
@@ -298,7 +299,7 @@
         background-color: #FBF8FF;
         border-radius: 10px;
         border: 5px #FBF8FF solid;
-        width: 1200px;
+        width: 85%;
     }
     .container-home h3 {
         font-size: 35px;
@@ -388,75 +389,86 @@
     }
 
     .slider-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: #E7D1FF;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #E7D1FF;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .slider {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .slider-item {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slider-item img {
+        /* max-width: 100%; */
+        /* width: 70%; */
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 5px white solid;
+    }
+    
+    .slider-item div {
+        width: 30%;
+        height: 100%;
+        margin-left: 10px;
+        background-color: #FBF8FF;
+        border-radius: 10px;
+    }
+    
+    .slider-item div h2{
+        color: #701B87;
+    }
+    .slider-item div h2 a{
+        color: #701B87;
+    }
+    .slider-item div h2 a:hover{
+        color: #cf63ed;
+    }
+    .slider-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .slider-nav button {
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        margin: 0 5px;
+        font-size: 24px;
+        transition: color 0.3s;
+    }
+    
+    .slider-nav button:hover {
+        color: #777;
+    }
+
+    @media (max-width: 960px) {
+        .round-div {
+            width: 100px;
+            height: 100px;
         }
-        
-        .slider {
-            width: 100%;
-            height: 400px;
-            display: flex;
-            transition: transform 0.3s ease-in-out;
+
+        .fa-6x {
+            font-size: 3em;
         }
-        
-        .slider-item {
-            flex: 0 0 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .slider-item img {
-            /* max-width: 100%; */
-            /* width: 70%; */
-            max-height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 5px white solid;
-        }
-        
-        .slider-item div {
-            width: 30%;
-            height: 100%;
-            margin-left: 10px;
-            background-color: #FBF8FF;
-            border-radius: 10px;
-        }
-        
-        .slider-item div h2{
-            color: #701B87;
-        }
-        .slider-item div h2 a{
-            color: #701B87;
-        }
-        .slider-item div h2 a:hover{
-            color: #cf63ed;
-        }
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .slider-nav button {
-            background: none;
-            border: none;
-            color: #333;
-            cursor: pointer;
-            margin: 0 5px;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
-        
-        .slider-nav button:hover {
-            color: #777;
-        }
+    }
 </style>
 
 
