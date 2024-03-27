@@ -12,13 +12,13 @@
 <body>
     <div id="header"></div>
 <center>
-    <div style="width: 920px; overflow: hidden; background-color: #FAFAFA; box-shadow:0px 5px 50px -20px rgba(100,100,100,0.5);">
+    <div style="margin: 20px; padding-top: 20px; width: 1200px; overflow: hidden; background-color: #E7D1FF;">
         <!-- <div>
             <img style="width: 920px" src="images\1home\pictop3.jpg" alt="hall9 picture">
         </div>
 				
         <div style="width: 920px; background-color: #8000FF; margin-top: -5px; border-top: 1px solid #FFFFFF;" id = "menu"></div> -->
-        <div class="container">
+        <!-- <div class="container">
             <div id="slides">
 
 		<div ><div><img  style="height: 380px" src="images\4act\微信图片_20220107220453.jpg" alt=""></div><div></div><a href="P4act.html?passi=1">PEK Running team</a></div>
@@ -33,9 +33,39 @@
 		<div ><div><img  style="height: 380px" src="images\4act\23_rt_team.jpeg" alt=""></div><div></div><a href="P2about.html?passi=3">Our Hall Master and RTs</a></div>
 
             </div>
+        </div> -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slider-item">
+                    <img  style="height: 400px" src="images\4act\微信图片_20220107220504.jpg" alt="">
+                    <div class="">
+                        <h2><a href="#" style="text-decoration: none; color: #701B87">Wuddies' Activity</a></h2>
+                        <p>example text example text example text example text example text example text example text example text example text example text example text example text </p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img  style="height: 400px" src="images\4act\微信图片_20220107220459.jpg" alt="">
+                    <div class="">
+                        <h2>Scavenger Hunt</h2>
+                        <p>example text example text example text example text example text example text example text example text example text example text example text example text </p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img  style="height: 400px" src="images\4act\微信图片_20220107220306.jpg" alt="">
+                    <div class="">
+                        <h2>Floor gathering</h2>
+                        <p>example text example text example text example text example text example text example text example text example text example text example text example text </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
         </div>        
         <br>
-
+    </div>
 
 	<!--<div style="width: 920px; background-color: #FFFAF0; margin-top: -5px; border-top: 1px solid #FFFFFF;" >
 	<table  style="border:1px #FFAC55 solid;" rules="rows" ;>
@@ -73,6 +103,64 @@
         Sir Gordon and Lady Ivy Wu Hall (Hall 9), Student Residence, City University of Hong Kong<br>
         22 Cornwall Street, Kowloon Tong, Kowloon, Hong Kong SAR
     </div> -->
+    <div class="container-home">
+        <h3>Loving, Caring and Inspiring</h3>
+        <h3>Home for City Learners</h3>
+        <img src="images/2peo/25c.jpg">
+        
+        <h3> Our mission </h3>
+        <ul>
+            <li class="mission-item"><span>Excellent:</span> in academic and social endeavors.</li>
+            <li class="mission-item"><span>Global:</span> in understanding and experience.</li>
+            <li class="mission-item"><span>Compassionate:</span> in heart.</li>
+            <li class="mission-item"><span>Collaborative:</span> in action.</li>
+        </ul>
+    </div>
+
+    <div class="container-values">
+        <h2>Hall 9 Core Values</h2>
+        <div class="row">
+            <div class="col">
+                <div class="round-div">
+                    <td class="icon"><i class="fa-solid fa-brain fa-6x center"></i></td>
+                    
+                </div>
+                <p>Wisdom</p>
+            </div>
+            <div class="col">
+                <div class="round-div">
+                    <td class="icon"><i class="fa-regular fa-handshake fa-6x center"></i></td>
+                </div>
+                <p>Respect</p>
+            </div>
+            <div class="col">
+                <div class="round-div">
+                    <td class="icon"><i class="fa-solid fa-people-arrows fa-6x center"></i></td>
+                </div>
+                <p>Compassion</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="round-div">
+                    <td class="icon"><i class="fa-solid fa-hand-holding-heart fa-6x center"></i></td>
+                </div>
+                <p>Love</p>
+            </div>
+            <div class="col">
+                <div class="round-div">
+                    <td class="icon"><i class="fa-solid fa-scale-balanced fa-6x center"></i></td>
+                </div>
+                <p>Justice</p>
+            </div>
+            <div class="col">
+                <div class="round-div">
+                    <td class="icon"><i class="fa-solid fa-dove fa-6x center"></i></td>
+                </div>
+                <p>Harmony</p>
+            </div>
+        </div>
+    </div>
 </center>
     <div id="footer"></div>
 
@@ -80,7 +168,6 @@
 
 
 <style>
-
 
     td {
     vertical-align: center;
@@ -191,7 +278,7 @@
     }         */
     
     body {
-        font-family: Calibri;
+        font-family: Outfit;
         background-size:100% 100%;
         background-repeat:no-repeat;
         background-attachment:fixed;
@@ -206,11 +293,199 @@
         margin-top: auto;
     }
 
+    .container-home {
+        margin: 20px;
+        background-color: #FBF8FF;
+        border-radius: 10px;
+        border: 5px #FBF8FF solid;
+        width: 1200px;
+    }
+    .container-home h3 {
+        font-size: 35px;
+        color: #701B87;
+        margin: 0;
+    }
+    .container-home img {
+        margin: 20px;
+        width: 70%;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+    
+    .container-home ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    .container-home li:before {
+        content: "\2022";
+        color: #333;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+    
+    .mission-item {
+        margin-bottom: 0px;
+        line-height: 1.5;
+        color: #701B87;
+        transition-duration: 0.2s;
+    }
+    
+    .mission-item span:hover {
+        font-weight: bold;
+        transition-duration: 0.2s;
+    }
+    .container-values {
+        margin: 30px;
+    }
+    .container-values h2{
+        font-size: 35px;
+        margin: 40px;
+        color: #701B87;
+    }
+    .container-values .row {
+        display: flex;
+        margin-top: 40px;
+    }
+    .container-values .row .col{
+        width: 33%;
+    }
+    .col p{
+        color: #701B87;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .round-div {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        background-color: #f4edfc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    i{
+        color: #373438;
+        transition-duration: 0.5s;
+    }
+    i:hover {
+        color: #9b2cba;
+        transition-duration: 0.5s;
+    }
+
+    .slider-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #E7D1FF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .slider-item {
+            flex: 0 0 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slider-item img {
+            /* max-width: 100%; */
+            /* width: 70%; */
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 5px white solid;
+        }
+        
+        .slider-item div {
+            width: 30%;
+            height: 100%;
+            margin-left: 10px;
+            background-color: #FBF8FF;
+            border-radius: 10px;
+        }
+        
+        .slider-item div h2{
+            color: #701B87;
+        }
+        .slider-item div h2 a{
+            color: #701B87;
+        }
+        .slider-item div h2 a:hover{
+            color: #cf63ed;
+        }
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .slider-nav button {
+            background: none;
+            border: none;
+            color: #333;
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        
+        .slider-nav button:hover {
+            color: #777;
+        }
 </style>
 
 
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/c1slides.js"></script>
+<script>
+    const slider = document.querySelector('.slider');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    let currentIndex = 0;
+    
+    function showSlide(index) {
+        if (index < 0) {
+            index = sliderItems.length - 1;
+        } else if (index >= sliderItems.length) {
+            index = 0;
+        }
+    
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+    }
+    
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+    
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+</script>
 <script>
     // $("#menu").load("Menu.html");
     $("#header").load("header.html");
