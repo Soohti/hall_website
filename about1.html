@@ -2,6 +2,7 @@
 
     <head>
         <title>Hall 9 - About 1</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
 
     <body>
@@ -39,30 +40,74 @@
             </p>
             <hr>
             <div class="heading">Explore Hall Year Books</div>
-            <a class="year-book">
-                <img>
-                <div class="alt">
-                    2013-2014
-                </div>
-            </a>
-            <a class="year-book">
-                <img>
-                <div class="alt">
-                    2014-2015
-                </div>
-            </a>
-            <a class="year-book">
-                <img>
-                <div class="alt">
-                    2015-2016
-                </div>
-            </a>
-            <a class="year-book">
-                <img>
-                <div class="alt">
-                    2016-2017
-                </div>
-            </a>
+            <div class="year-books">
+                <a class="arrow" href="">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <a class="year-book" style="display: none;">
+                    <img src="images/year-book-2013-2014.jpg" alt="2013-2014" />
+                    <div class="alt">
+                        2013-2014
+                    </div>
+                </a>
+                <a class="year-book" style="display: none;">
+                    <img src="images/year-book-2014-2015.jpg" alt="2014-2015" />
+                    <div class="alt">
+                        2014-2015
+                    </div>
+                </a>
+                <a class="year-book" style="display: none;">
+                    <img src="images/year-book-2015-2016.jpg" alt="2015-2016" />
+                    <div class="alt">
+                        2015-2016
+                    </div>
+                </a>
+                <a class="year-book" style="display: none;">
+                    <img src="images/year-book-2016-2017.jpg" alt="2016-2017" />
+                    <div class="alt">
+                        2016-2017
+                    </div>
+                </a>
+                <a class="year-book" style="display: none;">
+                    <img src="images/year-book-2017-2018.jpg" alt="2017-2018" />
+                    <div class="alt">
+                        2017-2018
+                    </div>
+                </a>
+                <a class="year-book" style="display: none;">
+                    <img src="images/year-book-2018-2019.jpg" alt="2018-2019" />
+                    <div class="alt">
+                        2018-2019
+                    </div>
+                </a>
+                <a class="year-book">
+                    <img src="images/year-book-2019-2020.jpg" alt="2019-2020" />
+                    <div class="alt">
+                        2019-2020
+                    </div>
+                </a>
+                <a class="year-book">
+                    <img src="images/year-book-2020-2021.jpg" alt="2020-2021" />
+                    <div class="alt">
+                        2020-2021
+                    </div>
+                </a>
+                <a class="year-book">
+                    <img src="images/year-book-2021-2022.jpg" alt="2021-2022" />
+                    <div class="alt">
+                        2021-2022
+                    </div>
+                </a>
+                <a class="year-book">
+                    <img src="images/year-book-2022-2023.jpg" alt="2022-2023" />
+                    <div class="alt">
+                        2022-2023
+                    </div>
+                </a>
+                <a class="arrow" href="">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
 
         <style>
@@ -114,10 +159,65 @@
                 margin-bottom: 40px;
             }
 
+            .year-books {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            a.arrow {
+                font-size: 30px;
+                color: black;
+            }
+
             @media (max-width: 960px) {
 
             }
         </style>
+
+        <script>
+            const arrow = document.querySelectorAll('.arrow');
+            const yearBooks = document.querySelectorAll('.year-book');
+            // display 4 year books at a time
+            // display the last 4 year books by default
+            let start = yearBooks.length - 4;
+            let end = yearBooks.length;
+            for (let i = start; i < end; i++) {
+                yearBooks[i].style.display = 'inline-block';
+            }
+            // display the previous 4 year books
+            arrow[0].addEventListener('click', (event) => {
+                event.preventDefault();
+                start -= 4;
+                end -= 4;
+                if (start < 0) {
+                    start = 0;
+                    end = 4;
+                }
+                for (let i = 0; i < yearBooks.length; i++) {
+                    yearBooks[i].style.display = 'none';
+                }
+                for (let i = start; i < end; i++) {
+                    yearBooks[i].style.display = 'inline-block';
+                }
+            });
+            // display the next 4 year books
+            arrow[1].addEventListener('click', (event) => {
+                event.preventDefault();
+                start += 4;
+                end += 4;
+                if (end > yearBooks.length) {
+                    start = yearBooks.length - 4;
+                    end = yearBooks.length;
+                }
+                for (let i = 0; i < yearBooks.length; i++) {
+                    yearBooks[i].style.display = 'none';
+                }
+                for (let i = start; i < end; i++) {
+                    yearBooks[i].style.display = 'inline-block';
+                }
+            });
+        </script>
 
     </body>
 
