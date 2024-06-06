@@ -14,19 +14,19 @@
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
                     <div class="slide slide-1" style="display: none;">
-                        <img class="slide-image" src="images/rt-2022-2023.jpg" alt="2022-2023" />
+                        <img class="slide-image" src="images/2peo/rt21-group.jpg" alt="2021-2022" />
                     </div>
                     <div class="slide slide-1">
-                        <img class="slide-image" src="images/rt-2023-2024.jpg" alt="2023-2024" />
+                        <img class="slide-image" src="images/2peo/RT22-group.jpeg" alt="2022-2023" />
                     </div>
                     <a class="arrow" href="">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
                 <hr class="inner">
-                <a class="rt" href="">
-                    <div class="heading-1 heading">Residence Tutors of 2023-2024</div>
-                </a>
+                <!-- <a class="rt" href=""> -->
+                    <div class="heading-1 heading">Residence Tutors of 2022-2023</div>
+                <!-- </a> -->
             </div>
             <hr>
             <div class="content-group">
@@ -36,17 +36,17 @@
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
                     <div class="slide slide-2" style="display: none;">
-                        <img class="slide-image" src="images/hrc-2022-2023.jpg" alt="2022-2023" />
+                        <img class="slide-image" src="images/2peo/22ra.jpg" alt="2021-2022" />
                     </div>
                     <div class="slide slide-2">
-                        <img class="slide-image" src="images/hrc-2023-2024.jpg" alt="2023-2024" />
+                        <img class="slide-image" src="images/2peo/23ra.jpg" alt="2022-2023" />
                     </div>
                     <a class="arrow" href="">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
                 <hr class="inner">
-                <div class="heading-2 heading">HRC Team of 2023-2024</div>
+                <div class="heading-2 heading">HRC Team of 2022-2023</div>
             </div>
         </div>
 
@@ -92,9 +92,13 @@
                 align-items: center;
             }
 
+            .slide {
+                padding: 0 15px;
+            }
             .slide img {
-                width: 700px;
+                max-width: 700px;
                 height: 400px;
+                object-fit: cover;
             }
 
             @media (max-width: 960px) {}
@@ -125,9 +129,9 @@
                 });
                 let heading = document.querySelector('.heading-1');
                 if (currentSlide1 === 0) {
-                    heading.innerHTML = 'Residence Tutors of 2022-2023';
+                    heading.innerHTML = 'Residence Tutors of 2021-2022';
                 } else {
-                    heading.innerHTML = 'Residence Tutors of 2023-2024';
+                    heading.innerHTML = 'Residence Tutors of 2022-2023';
                 }
             });
 
@@ -146,9 +150,9 @@
                 });
                 let heading = document.querySelector('.heading-1');
                 if (currentSlide1 === 0) {
-                    heading.innerHTML = 'Residence Tutors of 2022-2023';
+                    heading.innerHTML = 'Residence Tutors of 2021-2022';
                 } else {
-                    heading.innerHTML = 'Residence Tutors of 2023-2024';
+                    heading.innerHTML = 'Residence Tutors of 2022-2023';
                 }
             });
 
@@ -167,9 +171,9 @@
                 });
                 let heading = document.querySelector('.heading-2');
                 if (currentSlide2 === 0) {
-                    heading.innerHTML = 'HRC Team of 2022-2023';
+                    heading.innerHTML = 'HRC Team of 2021-2022';
                 } else {
-                    heading.innerHTML = 'HRC Team of 2023-2024';
+                    heading.innerHTML = 'HRC Team of 2022-2023';
                 }
             });
 
@@ -188,9 +192,9 @@
                 });
                 let heading = document.querySelector('.heading-2');
                 if (currentSlide2 === 0) {
-                    heading.innerHTML = 'HRC Team of 2022-2023';
+                    heading.innerHTML = 'HRC Team of 2021-2022';
                 } else {
-                    heading.innerHTML = 'HRC Team of 2023-2024';
+                    heading.innerHTML = 'HRC Team of 2022-2023';
                 }
             });
 
