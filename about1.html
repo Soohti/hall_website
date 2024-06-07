@@ -2,6 +2,7 @@
 
     <head>
         <title>Hall 9 - About 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
 
@@ -44,62 +45,72 @@
                 <a class="arrow" href="">
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
-                <a class="year-book" style="display: none;">
-                    <img src="images/year-book-2013-2014.jpg" alt="2013-2014" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://drive.google.com/file/d/0B69ClbaeIwx7RFFPazJWSlhpRWM/view?usp=sharing">
+                    <img src="images/2peo/yb14.jpg" alt="2013-2014" />
                     <div class="alt">
                         2013-2014
                     </div>
                 </a>
-                <a class="year-book" style="display: none;">
-                    <img src="images/year-book-2014-2015.jpg" alt="2014-2015" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://drive.google.com/file/d/0B69ClbaeIwx7YXJsSTZnVVRqdTg/view?usp=sharing">
+                    <img src="images/2peo/yb15.jpg" alt="2014-2015" />
                     <div class="alt">
                         2014-2015
                     </div>
                 </a>
-                <a class="year-book" style="display: none;">
-                    <img src="images/year-book-2015-2016.jpg" alt="2015-2016" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://drive.google.com/open?id=0B69ClbaeIwx7ZUJ5MUhBVUhCYzA">
+                    <img src="images/2peo/yb16.jpg" alt="2015-2016" />
                     <div class="alt">
                         2015-2016
                     </div>
                 </a>
-                <a class="year-book" style="display: none;">
-                    <img src="images/year-book-2016-2017.jpg" alt="2016-2017" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://drive.google.com/open?id=0B69ClbaeIwx7bWhGU1pKWE5jeVk">
+                    <img src="images/2peo/yb17.jpg" alt="2016-2017" />
                     <div class="alt">
                         2016-2017
                     </div>
                 </a>
-                <a class="year-book" style="display: none;">
-                    <img src="images/year-book-2017-2018.jpg" alt="2017-2018" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://drive.google.com/file/d/1AdknBX-NVHGCRHqfZdzlqNwkzMbd64T4/view?usp=sharing">
+                    <img src="images/2peo/yb18.jpg" alt="2017-2018" />
                     <div class="alt">
                         2017-2018
                     </div>
                 </a>
-                <a class="year-book" style="display: none;">
-                    <img src="images/year-book-2018-2019.jpg" alt="2018-2019" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://drive.google.com/file/d/1zXVP2N-tmoAiyy8P2dW5whU3X188Azz_/view?usp=sharing">
+                    <img src="images/2peo/yb19.jpg" alt="2018-2019" />
                     <div class="alt">
                         2018-2019
                     </div>
                 </a>
-                <a class="year-book">
-                    <img src="images/year-book-2019-2020.jpg" alt="2019-2020" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://issuu.com/hall9cityuhk/docs/hall_20year_20book_2019-2020">
+                    <img src="images/2peo/yb20.jpg" alt="2019-2020" />
                     <div class="alt">
                         2019-2020
                     </div>
                 </a>
-                <a class="year-book">
-                    <img src="images/year-book-2020-2021.jpg" alt="2020-2021" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://issuu.com/hall9cityuhk/docs/h9yearbook_202021_final">
+                    <img src="images/2peo/yb21.jpg" alt="2020-2021" />
                     <div class="alt">
                         2020-2021
                     </div>
                 </a>
-                <a class="year-book">
-                    <img src="images/year-book-2021-2022.jpg" alt="2021-2022" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://issuu.com/cityuhall9.2022/docs/hall_year_book_21-22">
+                    <img src="images/2peo/yb22.png" alt="2021-2022" />
                     <div class="alt">
                         2021-2022
                     </div>
                 </a>
-                <a class="year-book">
-                    <img src="images/year-book-2022-2023.jpg" alt="2022-2023" />
+                <a class="year-book" style="display: none;" target="_blank"
+                    href="https://www.yumpu.com/s/5udBM06XKofsQ1eh">
+                    <img src="images/2peo/yb23.jpeg" alt="2022-2023" />
                     <div class="alt">
                         2022-2023
                     </div>
@@ -170,16 +181,28 @@
                 color: black;
             }
 
-            @media (max-width: 960px) {}
+            @media (max-width: 960px) {
+                .year-books {
+                    flex-direction: column-reverse;
+                }
+
+                a.year-book {
+                    width: 80%;
+                }
+
+                a.arrow {
+                    display: none;
+                }
+            }
         </style>
 
         <script>
             const arrow = document.querySelectorAll('.arrow');
             const yearBooks = document.querySelectorAll('.year-book');
-            for (let i = 0; i < yearBooks.length; i++) {
-                yearBooks[i].href = "";
-            }
             let start = yearBooks.length - 4;
+            if (screen.width < 960) {
+                start = 0;
+            }
             let end = yearBooks.length;
             for (let i = start; i < end; i++) {
                 yearBooks[i].style.display = 'inline-block';
