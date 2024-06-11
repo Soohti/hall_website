@@ -38,7 +38,7 @@
         <div class="slider-container">
             <div class="slider">
                 <div class="slider-item">
-                    <img  style="height: 400px" src="images/1homepage/htd.jpg" alt="">
+                    <img src="images/1homepage/htd.jpg" alt="">
                     <div class="">
                         <h2><a href="#" style="text-decoration: none; color: #701B87">Wuddies' Activity</a></h2>
                         <p class="desktop_only">Get ready to mark your calendars! Our hall is a bustling center for a wide array of activities. Whether you're into sports, arts, community service, or cultural exchanges, there's something here for everyone.</p>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="slider-item">
-                    <img  style="height: 400px" src="images/1homepage/wuddiesP.jpg" alt="">
+                    <img src="images/1homepage/wuddiesP.jpg" alt="">
                     <div class="">
                         <h2>Wuddies Party</h2>
                         <p class="desktop_only"> A fantastic evening filled with prizes, games, and lots of delicious food! This is the perfect opportunity to socialize and have fun with everyone in the hall. </p>
@@ -54,28 +54,28 @@
                 </div>
 
                 <div class="slider-item">
-                    <img  style="height: 400px" src="images/1homepage/scavenger.jpg" alt="">
+                    <img src="images/1homepage/scavenger.jpg" alt="">
                     <div class="">
                         <h2>Scavenger Hunt</h2>
                         <p class="desktop_only">Get ready to explore, solve clues, and discover hidden treasures as you compete with fellow participants. Whether you're here to challenge yourself, enjoy some friendly competition, or simply have a great time with friends and family, this event promises to be a memorable experience. </p>
                     </div>
                 </div>
                 <div class="slider-item">
-                    <img  style="height: 400px" src="images/1homepage/floormeets.jpg" alt="">
+                    <img src="images/1homepage/floormeets.jpg" alt="">
                     <div class="">
                         <h2>Floor gatherings</h2>
                         <p class="desktop_only">Where residents come together to chat, share ideas, and enjoy a meal in a relaxed, friendly atmosphere. This is a fantastic opportunity to get to know your neighbors, discuss any concerns or suggestions, and help shape our community. </p>
                     </div>
                 </div>
                 <div class="slider-item">
-                    <img  style="height: 400px" src="images/1homepage/htd2.jpg" alt="">
+                    <img src="images/1homepage/htd2.jpg" alt="">
                     <div class="">
                         <h2>High Table Dinner</h2>
                         <p class="desktop_only">An evening filled with elegance and excitement. Enjoy a night of delicious food, captivating performances, engaging chats, and fun games and contests. Plus, you'll have the chance to win valuable prizes through our lucky draws! </p>
                     </div>
                 </div>
                 <div class="slider-item">
-                    <img  style="height: 400px" src="images/1homepage/sia.jpg" alt="">
+                    <img src="images/1homepage/sia.jpg" alt="">
                     <div class="">
                         <h2>Student Initiated Activities</h2>
                         <p class="desktop_only">Organized by students for students, where creativity and initiative come to life! Join us for engaging workshops, fun games, thrilling contests, and exciting outings. </p>
@@ -466,6 +466,7 @@
     .slider-item img {
         /* max-width: 100%; */
         /* width: 70%; */
+        height: 400px;
         max-height: 100%;
         object-fit: cover;
         border-radius: 10px;
@@ -522,6 +523,21 @@
         
         .desktop_only {
             display: none;
+        }
+
+        .slider-item {
+            flex-direction: column;
+        }
+
+        .slider-item div {
+            width: 100%;
+            height: auto;
+        }
+
+        .slider-item img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
     }
 </style>
